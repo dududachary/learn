@@ -1,3 +1,10 @@
+/***************************************************************************
+ * File: main.cpp
+ * Description: Lesson 8 Flashing a Led
+ * Created on: 06/10/2021
+ * Created By: Eduardo Schiavo Dachary
+ * ************************************************************************/
+
 #include <Arduino.h>
 
 // Definicção dos pinos

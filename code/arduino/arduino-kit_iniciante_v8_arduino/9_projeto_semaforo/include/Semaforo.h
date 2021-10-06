@@ -1,3 +1,10 @@
+/***************************************************************************
+ * File: Semaforo.h
+ * Description: Sample class for a Semaforo object.
+ * Created on: 06/10/2021
+ * Created By: Eduardo Schiavo Dachary
+ * ************************************************************************/
+
 #ifndef SEMAFORO_H
 #define SEMAFORO_H
 

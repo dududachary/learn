@@ -1,3 +1,10 @@
+/***************************************************************************
+ * File: main.cpp
+ * Description: Lesson 9 Project Semaforo
+ * Created on: 06/10/2021
+ * Created By: Eduardo Schiavo Dachary
+ * ************************************************************************/
+
 #include <Arduino.h>
 #include <Semaforo.h>
 
