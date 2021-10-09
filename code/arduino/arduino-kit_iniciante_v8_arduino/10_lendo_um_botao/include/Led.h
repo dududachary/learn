@@ -1,3 +1,12 @@
+/*******************************************************************************
+* Projeto: Lendo Um Botão Orientado a Objetos
+* Arquivo: Led.h
+* Autor: Eduardo Schiavo Dachari
+* Criado em: 06/10/2021
+* Descrição: Algoritmo para Arduíno que controla as ações de um atuador
+*            utilizando um pushbutton com resitor em pull-down físico.
+*******************************************************************************/
+
 #ifndef LED_H
 #define LED_H
 
