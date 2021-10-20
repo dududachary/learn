@@ -1,5 +1,5 @@
 import  sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QToolTip, QLabel
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QToolTip, QLabel, QLineEdit
 from PyQt5 import QtGui
 
 class Janela (QMainWindow):
@@ -27,6 +27,13 @@ class Janela (QMainWindow):
         botao2.setStyleSheet("QPushButton {background-color: #0FB328; font: bold; font-size: 20px}")
         botao2.clicked.connect(self.botao2_click)
 
+        # Define os atributos do botao texto
+        botao_texto = QPushButton("Enviar Texto", self)
+        botao_texto.move(550, 200)
+        botao_texto.resize(150, 80)
+        botao_texto.setStyleSheet("QPushButton {background-color: #0FB328; font: bold; font-size: 20px}")
+        botao_texto.clicked.connect(self.mostra_texto)
+
         # Define os atributos do label
         #Utilizando o self para ficar vizivel fora do metodo construtor
         self.label_1 = QLabel(self)
@@ -35,11 +42,23 @@ class Janela (QMainWindow):
         self.label_1.resize(400, 25)
         self.label_1.setStyleSheet("QLabel {font: bold; font-size: 20px; color: 'blue'}")
 
+        # Define os atributos do label caixa
+        self.label_caixa = QLabel(self)
+        self.label_caixa.setText("Digitou: ")
+        self.label_caixa.move(450, 50)
+        self.label_caixa.resize(400, 25)
+        self.label_caixa.setStyleSheet("QLabel {font: bold; font-size: 20px; color: 'blue'}")
+
         # Define os atributos da imagem
         self.carro = QLabel(self)
         self.carro.move(50, 350)
         self.carro.resize(400, 200)
         self.carro.setPixmap(QtGui.QPixmap('carro1.png'))
+
+        # Define a caixa de texto
+        self.caixa_texto = QLineEdit(self)
+        self.caixa_texto.move(25, 20)
+        self.caixa_texto.resize(250, 25)
 
         # Executa o metodo carregar janela 
         self.CarregarJanela()
@@ -58,11 +77,14 @@ class Janela (QMainWindow):
         self.label_1.setText("O carro 2 foi selecionado")
         self.label_1.setStyleSheet("QLabel {font: bold; font-size: 20px; color: 'red'}")
         self.carro.setPixmap(QtGui.QPixmap('carro2.png'))
-    
+
+    def mostra_texto(self):
+        conteudo = self.caixa_texto.text()
+        self.label_caixa.setText("Digitou: " + conteudo)
 
 aplicacao = QApplication(sys.argv)
 j = Janela()
 sys.exit(aplicacao.exec())
 
 # parei aqui
-# https://www.youtube.com/watch?v=2rKS3ZJcKjg
+# https://www.youtube.com/watch?v=fwqYbmCu64w&t=1s
